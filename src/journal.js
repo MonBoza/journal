@@ -4,20 +4,9 @@ export function Entry() {
 }
 
 Entry.prototype.getTeaser = function () {
-//   let firstEight = "";
   let finalMessage = "";
   let bodyArray = this.body.split(" ");
-  // let bodyArray2 = re.split('[.?!]\s*', this.body)
-  // let bodyArray3 = this.body.split(/[?!.](.*)/s)
-  // let punctuation = ["!",".","?"]
-  // text.match(/[!,?,.]/)
-  // /^(.*?)\?/
-  // /[?!.](.*)/s
-  // /^(.*?)\!/
   if (bodyArray.length > 8) {
-    // for (let i = 0; i < 8; i++) {
-    //   firstEight += bodyArray[i] + " ";
-    // }
     let firstSentence = this.body.split(/[?!.](.*)/s);
     return firstSentence[0];
   } else {
